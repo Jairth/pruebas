@@ -2,6 +2,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
+		"paths": {
+			"@env/*": ["src/environments/*"],
+			"@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/app/shared/utils/*"],
+      "@service-global/*": ["src/app/shared/services/*"],
+			"@/*": ["src/app/*"]
+		},
+
     "outDir": "./dist/out-tsc",
     "strict": false,
     "noImplicitOverride": true,

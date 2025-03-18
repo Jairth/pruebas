@@ -1,0 +1,72 @@
+<div class="flex items-center justify-center h-full">
+  <form class="form-session" [formGroup]="otpForm" (submit)="onSubmit()">
+    <picture>
+      <img src="assets/logos/logo-cds-black.svg" alt="Logo Cruz del Sur">
+    </picture>
+    <h2 class="title-form">Ingresa el código que llegó a tu correo</h2>
+
+    <div class="flow">
+      <div class="form-group">
+        <div class="input-group-form">
+          <input
+            class="input-custom-form"
+            type="text"
+            maxlength="1"
+            #otpInput
+            id="first"
+            placeholder=" "
+            (input)="moveFocus(1, $event)"
+            (keydown)="handleBackspace(0, $event)"
+            formControlName="first"
+          >
+          <label for="first"> </label>
+        </div>
+        <div class="input-group-form">
+          <input
+            class="input-custom-form"
+            type="text"
+            maxlength="1"
+            #otpInput
+            id="second"
+            placeholder=" "
+            (input)="moveFocus(2, $event)"
+            (keydown)="handleBackspace(0, $event)"
+            formControlName="second"
+          >
+          <label for="second"> </label>
+        </div>
+        <div class="input-group-form">
+          <input
+            class="input-custom-form"
+            type="text"
+            maxlength="1"
+            #otpInput
+            id="third"
+            placeholder=" "
+            (input)="moveFocus(3, $event)"
+            (keydown)="handleBackspace(1, $event)"
+            formControlName="third"
+          >
+          <label for="third"> </label>
+        </div>
+        <div class="input-group-form">
+          <input
+            class="input-custom-form"
+            type="text"
+            maxlength="1"
+            #otpInput
+            id="fourth"
+            placeholder=" "
+            (input)="moveFocus(4, $event)"
+            (keydown)="handleBackspace(2, $event)"
+            formControlName="fourth"
+          >
+          <label for="fourth"> </label>
+        </div>
+      </div>
+        <p class="subtitle-yellow">Solicitar nuevo código</p>
+    </div>
+
+    <button class="btn-custom">Ingresar</button>
+  </form>
+</div>

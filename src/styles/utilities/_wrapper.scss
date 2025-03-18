@@ -1,0 +1,10 @@
+.wrapper-custom {
+  /* --boxed-size: 71.25rem; */
+  --boxed-size: 90rem;
+  --boxed: max(calc((100vw - var(--boxed-size)) / 2), 1.25rem);
+  padding-inline: var(--boxed) !important;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1rem);
+}

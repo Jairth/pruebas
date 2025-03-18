@@ -10,8 +10,26 @@ export default [
 				loadComponent: () => import("./components/login/login.component"),
 			},
 			{
-				path: "register",
-				loadComponent: () => import("./components/register/register.component"),
+				path: "code-email",
+				loadComponent: () =>
+					import("./components/login-code/login-code.component"),
+			},
+			{
+				path: "verification-email",
+				loadComponent: () =>
+					import(
+						"./components/email-verification/email-verification.component"
+					),
+			},
+			{
+				path: "recovery-code",
+				loadComponent: () =>
+					import("./components/recovery-code/recovery-code.component"),
+			},
+			{
+				path: "update-password",
+				loadComponent: () =>
+					import("./components/update-password/update-password.component"),
 			},
 			{
 				path: "**",

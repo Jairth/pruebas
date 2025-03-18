@@ -1,0 +1,21 @@
+@import "./utilities/button-custom";
+@import "./utilities/wrapper";
+@import "./utilities/input-custom";
+@import "./utilities/titles";
+@import "./utilities/form";
+
+:root {
+  --primary-color: #001C46;
+  --secondary-color: #FCB958;
+
+  --bg-gray: #F4F5F8;
+  --bg-light-gray: #F9F9F9;
+  --color-txt: #575962;
+  --color-line: #EBEDF2;
+  --color-white: #ffffff;
+  --color-error: #F4516C;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}

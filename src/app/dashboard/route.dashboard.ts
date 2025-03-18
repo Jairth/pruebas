@@ -3,7 +3,7 @@ import type { Routes } from "@angular/router";
 export default [
 	{
 		path: "",
-		loadComponent: () => import("./ui/dashboard/dashboard.component"),
+		loadComponent: () => import("./ui/dashboard-page/dashboard-page.component"),
 		children: [
 			{
 				path: "users",

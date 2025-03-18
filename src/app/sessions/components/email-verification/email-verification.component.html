@@ -1,0 +1,22 @@
+<div class="flex items-center justify-center h-full">
+  <form class="form-session" [formGroup]="verificationEmailForm" (submit)="onSubmit()">
+    <picture>
+      <img src="assets/logos/logo-cds-black.svg" alt="Logo Cruz del Sur">
+    </picture>
+    <h2 class="title-form">Ingresa tu correo para recuperar tu contraseña</h2>
+
+    <div class="flow">
+      <div class="form-group">
+        <div class="input-group-form">
+          <input class="input-custom-form" type="email" id="email" placeholder=" " formControlName="email">
+          <label for="email">Correo</label>
+          @if (hasFormError(verificationEmailForm, 'email')) {
+            <span class="error">Este campo es obligatorio</span>
+          }
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-custom">Ingresar</button>
+  </form>
+</div>

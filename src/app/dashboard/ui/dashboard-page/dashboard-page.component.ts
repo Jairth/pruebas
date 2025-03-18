@@ -1,12 +1,14 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component, HostBinding } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
+import KTLayout from "../../../../metronic/app/layouts/demo1";
+import KTComponents from "../../../../metronic/core";
 import { FooterComponent } from "../../../layouts/footer/footer.component";
 import { HeaderComponent } from "../../../layouts/header/header.component";
 import { SidebarComponent } from "../../../layouts/sidebar/sidebar.component";
 import { SearchModalComponent } from "../../../partials/search-modal/search-modal.component";
 
 @Component({
-	selector: "app-layout",
+	selector: "app-dashboard-page",
 	imports: [
 		RouterOutlet,
 		SidebarComponent,
@@ -14,8 +16,15 @@ import { SearchModalComponent } from "../../../partials/search-modal/search-moda
 		FooterComponent,
 		SearchModalComponent,
 	],
-	templateUrl: "./dashboard.component.html",
-	styleUrl: "./dashboard.component.scss",
+	templateUrl: "./dashboard-page.component.html",
+	styleUrl: "./dashboard-page.component.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class DashboardComponent {}
+export default class DashboardPageComponent {
+	@HostBinding("class") hostClass = "flex grow";
+
+	ngAfterViewInit(): void {
+		KTComponents.init();
+		KTLayout.init();
+	}
+}

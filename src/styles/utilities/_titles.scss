@@ -1,0 +1,24 @@
+.title-form {
+  color: var(--color-txt);
+  font-size: 1.3125rem;
+  text-align: var(--txt-center, center);
+}
+
+.subtitle-yellow {
+  color: var(--secondary-color);
+  text-align: var(--text-align, center);
+  font-size: .875rem;
+  font-weight: 400;
+  cursor: var(--cursor, normal);
+}
+
+.error {
+  position: absolute;
+  color: var(--color-error);
+  font-weight: 500;
+  font-size: .75rem;
+  line-height: 1rem;
+  bottom: -55%;
+  left: 0.3rem;
+  width: 100%;
+}

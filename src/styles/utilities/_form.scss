@@ -1,0 +1,47 @@
+.form-group {
+  display: flex;
+  flex-flow: var(--column, column) nowrap;
+  align-items: var(--align-items, center);
+  gap: var(--gap, 1rem);
+}
+
+.form-row {
+  display: flex;
+  justify-content: var(--justify-content, space-between);
+  align-items: var(--align-items, center);
+  gap: 1rem;
+  color: var(--color-txt);
+}
+
+.form-session {
+  max-width: 21.875rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2.5rem;
+
+  & img {
+    margin: auto;
+  }
+}
+
+.input-group-form {
+  width: 100%;
+  position: relative;
+
+  & label {
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    translate: 0 -50%;
+    color: var(--color-txt);
+    cursor: auto;
+    transition: all 250ms ease;
+  }
+
+  & input:focus-visible ~ label,
+  & input:not(:placeholder-shown) ~ label {
+    top: -25%;
+    font-size: 0.75rem;
+  }
+}

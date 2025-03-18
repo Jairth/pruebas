@@ -1,0 +1,19 @@
+.btn-custom {
+  width: min(100%, var(--width, 9.0625rem));
+  color: var(--color-white);
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1;
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  border: 1px solid var(--primary-color);
+  padding: .75rem 2rem;
+  margin-inline: var(--margin-inline, auto);
+
+  // transition: translate 200ms ease, box-shadow 200ms ease;
+}
+
+// .btn-custom:hover {
+//   translate: 0 2px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+// }
